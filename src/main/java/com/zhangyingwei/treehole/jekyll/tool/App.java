@@ -9,8 +9,8 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-        String fromPath = "D:/work/code/zhangyingwei/treehole-jekyll/theme-docs/hcz-jekyll-blog";
-        String toPath = "D:/work/code/zhangyingwei/treehole-jekyll/theme-docs/hcz-treehole-blog";
+        String fromPath = "/Users/zhangyw/zhangyw/code/github.com/treehole-theme/hcz-jekyll-blog";
+        String toPath = "/Users/zhangyw/zhangyw/code/github.com/treehole-theme/hcz-treehole-blog";
         new FileExecuter(fromPath, toPath).execute();
     }
 }
