@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="431459b3-ff38-4ab6-be0a-6556dd615c7d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zhangyingwei/treehole/jekyll/tool/App.class" afterPath="$PROJECT_DIR$/target/classes/com/zhangyingwei/treehole/jekyll/tool/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zhangyingwei/treehole/jekyll/tool/FileExecuter.class" afterPath="$PROJECT_DIR$/target/classes/com/zhangyingwei/treehole/jekyll/tool/FileExecuter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/ContentTranslater.java" afterPath="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/ContentTranslater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,12 +56,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentTranslater.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContentTranslater.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/ContentTranslater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+            <state relative-caret-position="2">
+              <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="168">
+                <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -111,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/Translater.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/PathTranslater.java" />
@@ -119,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/App.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/ContentTranslater.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -775,12 +784,20 @@
       <option name="presentableId" value="Default" />
       <updated>1499670866280</updated>
       <workItem from="1499670874809" duration="6293000" />
-      <workItem from="1499688904269" duration="5020000" />
+      <workItem from="1499688904269" duration="5119000" />
     </task>
+    <task id="LOCAL-00001" summary="完善了一下">
+      <created>1499696130392</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1499696130392</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11313000" />
+    <option name="totallyTimeSpent" value="11412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1013" extended-state="6" />
@@ -823,6 +840,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完善了一下" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了一下" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -889,16 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -957,9 +968,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhangyingwei/treehole/jekyll/tool/translater/ContentTranslater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        <state relative-caret-position="2">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
