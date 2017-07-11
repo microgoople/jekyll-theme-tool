@@ -2,6 +2,8 @@ package com.zhangyingwei.treehole.jekyll.tool;
 
 import com.zhangyingwei.treehole.jekyll.tool.translater.ContentTranslater;
 import com.zhangyingwei.treehole.jekyll.tool.utils.FileUtils;
+
+import java.io.File;
 import java.util.List;
 
 /**
@@ -21,7 +23,7 @@ public class FileExecuter {
         List<String> files = FileUtils.listFiles(this.fromPath);
         files.stream().filter(file -> file.endsWith(".html")).map(file -> new String[]{file,FileUtils.content(file)}).map(content -> {
             String resultPath = this.pathTranslater(content[0]);
-            String resultContent = this.contentTranslater(content[1]);
+            String resultContent = this.contentTranslater(new File(content[0]).getName(),content[1]);
             return new String[]{resultPath,resultContent};
         }).forEach(result -> {
 //            System.out.println(result[0]);
@@ -30,8 +32,8 @@ public class FileExecuter {
         files.stream().filter(file -> !file.endsWith(".html")).forEach(file -> FileUtils.copy(file,this.pathTranslater(file)));
     }
 
-    private String contentTranslater(String content) {
-        return new ContentTranslater().exec(content);
+    private String contentTranslater(String name, String content) {
+        return new ContentTranslater().exec(name,content);
     }
 
     private String pathTranslater(String path) {
