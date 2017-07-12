@@ -31,8 +31,13 @@ public class ContentTranslater implements Translater {
         content = this.ifExec(content);
         content = this.includeExec(content);
         content = this.actionExec(content);
+        content = this.rangeExec(content);
 //        content = this.contentExec(name,content);
         return content;
+    }
+
+    private String rangeExec(String content) {
+        return content.replaceAll("\\(1..", "range(1,");
     }
 
     /**
@@ -62,7 +67,7 @@ public class ContentTranslater implements Translater {
     private String ifExec(String content) {
         content = content.replaceAll(" if ", " if(");
         content = content.replaceAll("endif", " } ");
-        content = replaceNext(content, "%>", " if(", "){ ");
+        content = replaceNext(content, "%>", " if(", "!=null){ ");
         content = content.replaceAll("else", "} else {");
         content = content.replaceAll("elsif", "} else if( ");
         content = replaceNext(content, "%>", "} else if(", "){ ");
@@ -93,13 +98,14 @@ public class ContentTranslater implements Translater {
             String result = matcher.group(0);
             int length = content.length();
             content = this.actionTranslater(content,result,matcher.start()+indexPy,matcher.end()+indexPy);
-            indexPy = content.length() - length;
+            indexPy += content.length() - length;
             find = matcher.find(matcher.end());
         }
         return content;
     }
 
     private String actionTranslater(String content, String result, int start, int end) {
+        String resultContent = "";
         StringBuffer buffer = new StringBuffer(content);
         if(result.contains("|")){
             String[] results = result.replaceAll(" ", "").split("\\|");
@@ -115,11 +121,13 @@ public class ContentTranslater implements Translater {
                 }
             }
             System.out.println("to: " + cont);
-            buffer = buffer.replace(start, end, cont);
+            resultContent = buffer.replace(start, end, "treeholezwf").toString();
+            resultContent = resultContent.replace("treeholezwf", cont);
         }else{
             System.out.println(result.trim() + " 没有调用方法");
+            resultContent = content;
         }
-        return buffer.toString();
+        return resultContent;
     }
 
     private String date2StringAction(String cont, String res) {
@@ -131,7 +139,7 @@ public class ContentTranslater implements Translater {
         String content = cont;
         String from = items[0];
         String to = items[1];
-        return "replace(" + content + "," + from + "," + to + ")";
+        return "replace((" + content + ")," + from + "," + to + ")";
     }
 
     private String prependAction(String cont, String item) {
@@ -141,10 +149,12 @@ public class ContentTranslater implements Translater {
     private String replaceNext(String content, String next, String from, String to) {
         StringBuffer buffer = new StringBuffer(content);
         int index = buffer.indexOf(from);
+        int endIndex = -1;
         while(index != -1){
             int index2 = buffer.indexOf(next, index+1);
             if(index2 != -1){
                 buffer = buffer.replace(index2 - 1, index2, to);
+                endIndex = index2;
             }
             index = buffer.indexOf(from,index+1);
         }
